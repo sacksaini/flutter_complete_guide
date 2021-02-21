@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(
               title: Text('My First App'),
-              backgroundColor: Colors.green,
+              backgroundColor: Colors.lightBlue,
             ),
             body: Scaffold(
               backgroundColor: Colors.blueGrey,
