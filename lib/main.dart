@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.green,
             ),
             body: Scaffold(
-              backgroundColor: Colors.lightGreen,
+              backgroundColor: Colors.blueGrey,
             )));
   }
 }
