@@ -9,10 +9,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      appBar: AppBar(
-        title: Text('My First App'),
-      ),
-      body: Text('This is a default'),
-    ));
+            appBar: AppBar(
+              title: Text('My First App'),
+              backgroundColor: Colors.green,
+            ),
+            body: Scaffold(
+              backgroundColor: Colors.lightGreen,
+            )));
   }
 }
