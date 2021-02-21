@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
             ),
             body: Scaffold(
               backgroundColor: Colors.blueGrey,
+              body: Text("This is the text"),
+              floatingActionButton: Text("Float"),
             )));
   }
 }
