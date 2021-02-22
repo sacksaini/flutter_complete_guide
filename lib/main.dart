@@ -1,23 +1,26 @@
 import "package:flutter/material.dart";
+import "./questions.dart";
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  //main class where no changes are dne
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var questionIndex = 0;
-  void answerQuestion() {
+class _MyAppState extends State<MyApp> {
+  // Underscore converts a class into a private class
+  // This is a state of the MyApp class. All changes are done here and not on the main class
+  var _questionIndex = 0;
+  void _answerQuestion() {
     setState(() {
-      questionIndex++;
+      //SetState Rerenders the desired part of the app and not every pixel on screen.
+      _questionIndex++;
     });
-
-    print(questionIndex);
   }
 
   @override
@@ -34,18 +37,18 @@ class MyAppState extends State<MyApp> {
             ),
             body: Column(
               children: [
-                Text(questions[questionIndex]),
+                Questions(questions[_questionIndex]),
                 RaisedButton(
                   child: Text('Answer 1'),
-                  onPressed: answerQuestion,
+                  onPressed: _answerQuestion,
                 ),
                 RaisedButton(
                   child: Text('Answer 2'),
-                  onPressed: answerQuestion,
+                  onPressed: _answerQuestion,
                 ),
                 RaisedButton(
                   child: Text('Answer 3'),
-                  onPressed: answerQuestion,
+                  onPressed: _answerQuestion,
                 ),
               ],
             )));
