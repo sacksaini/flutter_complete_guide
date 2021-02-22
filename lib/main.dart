@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   // Underscore converts a class into a private class
-  // This is a state of the MyApp class. All changes are done here and not on the main class
+  // This is a state of the MyApp class. All changes are done here and not on the main class.
   var _questionIndex = 0;
   void _answerQuestion() {
     setState(() {
