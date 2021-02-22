@@ -7,8 +7,8 @@ class Questions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      margin: EdgeInsets.all(12),
+      width: double.infinity, //infinity takes up as much space as it can
+      margin: EdgeInsets.all(12), //all adds margins to all four sides
       child: Text(
         questionText,
         style: TextStyle(fontSize: 34, color: Colors.blue),
