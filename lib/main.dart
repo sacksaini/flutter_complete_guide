@@ -7,7 +7,6 @@ class MyApp extends StatefulWidget {
   //main class where no changes are dne
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _MyAppState();
   }
 }
