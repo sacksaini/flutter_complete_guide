@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
-import 'package:flutter_complete_guide/answer.dart';
-import "./questions.dart";
+import 'package:flutter_complete_guide/result.dart';
+import "./quiz.dart";
+import './result.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,7 +26,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
+    var _questions = [
       {
         'question': 'What\'s your favourite Color?',
         'answer': ['Blue', 'Red', 'Pink', 'Yellow']
@@ -45,13 +46,12 @@ class _MyAppState extends State<MyApp> {
               title: Text('My First App'),
               backgroundColor: Colors.lightBlue,
             ),
-            body: Column(
-              children: [
-                Questions(questions[_questionIndex]['question']),
-                Answer(_answerQuestion),
-                Answer(_answerQuestion),
-                Answer(_answerQuestion),
-              ],
-            )));
+            body: _questionIndex < _questions.length
+                ? Quiz(
+                    answerQuestion: _answerQuestion,
+                    questions: _questions,
+                    questionIndex: _questionIndex,
+                  )
+                : Result()));
   }
 }
