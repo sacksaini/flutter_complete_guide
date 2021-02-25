@@ -8,12 +8,21 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      child: RaisedButton(
-          color: Colors.lightBlue,
-          textColor: Colors.white,
-          child: Text(answerText),
-          onPressed: answerHandler),
+      width: double.maxFinite,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 5, 20, 0),
+        child: RaisedButton(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            color: Colors.blueAccent,
+            textColor: Colors.black,
+            child: Text(answerText,
+                style: TextStyle(
+                  fontSize: 21,
+                  color: Colors.black,
+                )),
+            onPressed: answerHandler),
+      ),
     );
   }
 }

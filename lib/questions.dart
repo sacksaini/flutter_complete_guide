@@ -11,7 +11,8 @@ class Questions extends StatelessWidget {
       margin: EdgeInsets.all(12), //all adds margins to all four sides
       child: Text(
         questionText,
-        style: TextStyle(fontSize: 34, color: Colors.blue),
+        style: TextStyle(
+            fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
         textAlign: TextAlign.center,
       ),
     );
