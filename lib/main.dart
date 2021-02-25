@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     final _questions = const [
       {
-        'question': 'Fill in the Blanks: \n Jazzlyn is playing ___ the park.',
+        'question': 'Jazzlyn is playing ___ the park.',
         'answer': [
           {'text': 'in', 'score': 1},
           {'text': 'at', 'score': 1},
@@ -60,14 +60,14 @@ class _MyAppState extends State<MyApp> {
         ]
       },
       {
-        'question': 'Fill in the Blanks: \n I ___ a good dancer.',
+        'question': 'I ___ a good dancer.',
         'answer': [
           {'text': 'is', 'score': 0},
           {'text': 'am', 'score': 1},
         ]
       },
       {
-        'question': 'Fill in the Blanks: \n I want ___ barbie doll.',
+        'question': 'I want ___ barbie doll.',
         'answer': [
           {'text': 'a', 'score': 1},
           {'text': 'an', 'score': 0},
@@ -75,31 +75,31 @@ class _MyAppState extends State<MyApp> {
         ]
       },
       {
-        'question': 'Fill in the Blanks: \n Do you ____ two pencils?',
+        'question': ' Jazzlyn is hiding _____ the tree!',
         'answer': [
-          {'text': 'are', 'score': 0},
-          {'text': 'has', 'score': 0},
-          {'text': 'have', 'score': 1},
+          {'text': 'in', 'score': 0},
+          {'text': 'out', 'score': 0},
+          {'text': 'behind', 'score': 1},
         ]
       },
       {
         'question':
-            'susie needs 13 balloons. She already has 4 balloons. How many more balloons does she need?',
+            'Sachin have 3 books, and Jazzlyn have 5 books. How many total books are there?',
         'answer': [
           {'text': '5', 'score': 0},
-          {'text': '9', 'score': 1},
-          {'text': '8', 'score': 0},
+          {'text': '9', 'score': 0},
+          {'text': '8', 'score': 1},
           {'text': '2', 'score': 0},
         ]
       },
       {
         'question':
-            'Jazzlyn have 6 toys, she gives 2 toys to Trisha, how may toys are left with jazzlyn?',
+            'Jazzlyn have 6 toys, she gives 2 toys to Subek, how may toys are left with Jazzlyn?',
         'answer': [
-          {'text': '53', 'score': 0},
-          {'text': '8', 'score': 1},
-          {'text': '7', 'score': 0},
           {'text': '9', 'score': 0},
+          {'text': '4', 'score': 1},
+          {'text': '0', 'score': 0},
+          {'text': '6', 'score': 0},
         ]
       },
       {
@@ -126,12 +126,15 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ),
                   ),
-            body: _questionIndex < _questions.length
-                ? Quiz(
-                    answerQuestion: _answerQuestion,
-                    questions: _questions,
-                    questionIndex: _questionIndex,
-                  )
-                : Result(_totalScore, _resetQuiz)));
+            body: Container(
+              color: Colors.black12,
+              child: _questionIndex < _questions.length
+                  ? Quiz(
+                      answerQuestion: _answerQuestion,
+                      questions: _questions,
+                      questionIndex: _questionIndex,
+                    )
+                  : Result(_totalScore, _resetQuiz),
+            )));
   }
 }

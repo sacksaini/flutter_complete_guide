@@ -10,10 +10,10 @@ class Result extends StatelessWidget {
     String resultText;
     if (resultScore > 4 && resultScore < 6)
       resultText = "\nYou Passed";
-    else if (resultScore > 5)
+    else if (resultScore > 5 &&resultScore<8)
       resultText = "Well Done Jazzlyn!!";
     else if (resultScore == 8)
-      resultText = "Excellent! You've got fullmarks!";
+      resultText = "Excellent! You've got Full Marks!";
     else
       resultText = "You Failed";
     return resultText;
