@@ -42,12 +42,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     final _questions = const [
       {
-        'question':
-            'Fill in the Blanks: \n I am going ____  to play in the park. .',
+        'question': 'Fill in the Blanks: \n Jazzlyn is playing ___ the park.',
         'answer': [
-          {'text': 'off', 'score': 0},
+          {'text': 'in', 'score': 1},
+          {'text': 'at', 'score': 1},
           {'text': 'on', 'score': 0},
-          {'text': 'Out', 'score': 1},
           {'text': 'into', 'score': 0},
         ]
       },
@@ -61,18 +60,18 @@ class _MyAppState extends State<MyApp> {
         ]
       },
       {
-        'question': 'Fill in the Blanks: \n I ___ good at climbing trees.',
+        'question': 'Fill in the Blanks: \n I ___ a good dancer.',
         'answer': [
           {'text': 'is', 'score': 0},
           {'text': 'am', 'score': 1},
         ]
       },
       {
-        'question': 'Fill in the Blanks: \n The balls ___ new.',
+        'question': 'Fill in the Blanks: \n I want ___ barbie doll.',
         'answer': [
-          {'text': 'is', 'score': 0},
-          {'text': 'am', 'score': 0},
-          {'text': 'are', 'score': 1},
+          {'text': 'a', 'score': 1},
+          {'text': 'an', 'score': 0},
+          {'text': 'the', 'score': 0},
         ]
       },
       {
@@ -94,12 +93,13 @@ class _MyAppState extends State<MyApp> {
         ]
       },
       {
-        'question': 'How much is 5 tens and 3 ones?',
+        'question':
+            'Jazzlyn have 6 toys, she gives 2 toys to Trisha, how may toys are left with jazzlyn?',
         'answer': [
-          {'text': '503', 'score': 0},
-          {'text': '53', 'score': 1},
-          {'text': '5300', 'score': 0},
-          {'text': '530', 'score': 0},
+          {'text': '53', 'score': 0},
+          {'text': '8', 'score': 1},
+          {'text': '7', 'score': 0},
+          {'text': '9', 'score': 0},
         ]
       },
       {
@@ -114,7 +114,7 @@ class _MyAppState extends State<MyApp> {
     ];
     return MaterialApp(
         home: Scaffold(
-            appBar: questionNumber < 3
+            appBar: questionNumber < 9
                 ? AppBar(
                     title: Center(child: Text('Question No. $questionNumber')),
                     backgroundColor: Colors.lightBlue,
